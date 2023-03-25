@@ -21,13 +21,18 @@
       "required": true,
       "maxLength": 200
     },
-    "body": {
-      "type": "richtext",
-      "required": true
-    },
     "slug": {
       "type": "uid",
       "targetField": "title"
+    },
+    "body": {
+      "type": "customField",
+      "options": {
+        "output": "Markdown",
+        "preset": "standard"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor.CKEditor"
     }
   }
 }
