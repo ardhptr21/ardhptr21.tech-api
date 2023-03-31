@@ -26,6 +26,8 @@ import ckeditor5WordCountDll from "@ckeditor/ckeditor5-word-count/build/word-cou
 import ckeditor5MaximumLengthDll from "@reinmar/ckeditor5-maximum-length/build/maximum-length.js";
 import { StrapiMediaLib } from "./plugins/StrapiMediaLib";
 
+import { languages } from "./globalConfig.js"
+
 const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
   light: {
     plugins: [
@@ -90,6 +92,7 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
         'toggleTableCaption'
       ]
     },
+    codeBlock: { languages }
   },
 
   standard: {
@@ -162,28 +165,7 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
         'toggleTableCaption'
       ]
     },
-    codeBlock: {
-      languages: [
-        { language: 'plaintext', label: 'Plain text' },
-        { language: 'html', label: 'HTML' },
-        { language: 'css', label: 'CSS' },
-        { language: 'javascript', label: 'JavaScript' },
-        { language: 'typescript', label: 'TypeScript' },
-        { language: 'php', label: 'PHP' },
-        { language: 'python', label: 'Python' },
-        { language: 'bash', label: 'Bash' },
-        { language: 'c', label: 'C' },
-        { language: 'cpp', label: 'C++' },
-        { language: 'java', label: 'Java' },
-        { language: 'go', label: 'Go' },
-        { language: 'sql', label: 'SQL' },
-        { language: 'json', label: 'JSON' },
-        { language: 'yaml', label: 'YAML' },
-        { language: 'xml', label: 'XML' },
-        { language: 'markdown', label: 'Markdown' },
-        { language: 'dockerfile', label: 'Dockerfile' },
-      ]
-    }
+    codeBlock: { languages }
   },
 
   rich: {
@@ -317,6 +299,7 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
         'toggleTableCaption'
       ]
     },
+    codeBlock: { languages },
     fontSize: {
       options: [
         9,
